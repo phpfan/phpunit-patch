@@ -4,14 +4,14 @@ Fixes `assertSame()`/`assertEquals()` serialization errors running in separate p
 
 ## Requirements
 
-- php: `>=5.3.3`
-- [phpunit/phpunit](https://github.com/sebastianbergmann/phpunit): `>=4.8.0`
-- [sebastianbergmann/comparator](https://github.com/sebastianbergmann/comparator): `^1.0 || ^2.0 || ^3.0 || ^4.0`
+- php: `>=7.4`
+- [phpunit/phpunit](https://github.com/sebastianbergmann/phpunit): `=9.5`
+- [sebastianbergmann/comparator](https://github.com/sebastianbergmann/comparator): `^4.0`
 
 ## Installing
 
 ```bash
-composer require --dev mpyw/phpunit-patch-serializable-comparison
+composer require --dev phpfan/phpunit-patch
 ```
 
 ## Example
