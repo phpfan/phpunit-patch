@@ -14,9 +14,9 @@
             <directory suffix="TestTest.php">./tests/</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">classmap</directory>
-        </whitelist>
-    </filter>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./files</directory>
+        </include>
+    </coverage>
 </phpunit>

@@ -56,3 +56,44 @@ Failed asserting that two strings are identical.
 -'aaa'
 +'bbb'
 ```
+
+```php
+class DataProviderTest extends TestCase
+{
+    public function provideAdditionTestParams()
+    {
+        return [
+            'say hello' => [
+                function ($mr) {
+                    return "Hello, $mr!";
+                }
+            ],
+            'hello arrow' => [fn($ms) => "Hello, $ms!"]
+        ];
+    }
+
+    /**
+     * @runInSeparateProcess
+     * @preserveGlobalState disabled
+     * @dataProvider provideAdditionTestParams
+     */
+    public function testUseClosureDataProviderTest($data)
+    {
+        self::assertSame('Hello, aaa!', $data('aaa'));
+    }
+}
+```
+
+### Before Patching
+
+```
+Serialization of 'Closure' is not allowed
+```
+
+### After Patching
+
+```
+Time: 00:00.213, Memory: 6.00 MB
+
+OK (2 tests, 2 assertions)
+```
