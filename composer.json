@@ -17,6 +17,8 @@
     "autoload": {
         "files": [
             "./files/ComparisonFailure.php",
+            "./files/Exception.php",
+            "./files/ExceptionWrapper.php",
             "./files/TestCase.php"
         ]
     },
